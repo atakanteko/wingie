@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wingie Fake API and User Listing App
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project consists of two main parts:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Fake API**: A GraphQL API created with Apollo Server and deployed on Vercel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **User Listing App**: A React application that consumes the fake API, lists users with Server-Side Rendering (SSR), allows users to be voted, and follows best practices. Sentry is integrated for error monitoring.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Fake API
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The fake API is built using Apollo Server and is deployed at [https://wingie-fake-api.vercel.app/graphql](https://wingie-fake-api.vercel.app/graphql).
 
-## Learn More
+# User Listing and Voting App
 
-To learn more about Next.js, take a look at the following resources:
+This application implements server-side rendering (SSR) using the latest version of Next.js. It allows users to view a list of users and vote for their favorites. The app also integrates Sentry for error monitoring.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Application URL and Sentry Example Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Application is deployed at [https://wingie.vercel.app](https://wingie.vercel.app)
 
-## Deploy on Vercel
+Sentry example page is deployed at [hhttps://wingie.vercel.app/sentry-example-page](https://wingie.vercel.app/sentry-example-page)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Server-Side Rendering (SSR)**: Utilizes Next.js for efficient SSR, enhancing performance and SEO.
+- **User Listing**: Displays a list of users fetched from a GraphQL API.
+- **Voting**: Users can vote for their favorite users, increasing their vote count.
+- **GraphQL Integration**: Uses Apollo Client to interact with a GraphQL server.
+- **Error Monitoring**: Sentry is integrated to monitor and track errors in real-time.
+
+## Technologies Used
+
+- **Next.js**: Latest version for SSR and enhanced frontend performance.
+- **React**: Frontend framework for building the user interface.
+- **Apollo Client**: Fetches data from the GraphQL API.
+- **GraphQL**: Query language for APIs used to fetch and mutate user data.
+- **Sentry**: Integrated for proactive error monitoring and tracking.
