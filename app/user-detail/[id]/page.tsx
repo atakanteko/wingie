@@ -3,7 +3,6 @@ import { ISingleUserData, IUserData } from '@/app/interface';
 import { GET_USER, GET_USERS } from '@/graphql/queries/getUsers';
 import client from '@/lib/apollo-client';
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import React from 'react';
 
 type UserDetailPageProps = {
