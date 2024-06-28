@@ -1,0 +1,7 @@
+.user-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 24px;
+}

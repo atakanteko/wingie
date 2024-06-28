@@ -1,25 +1,15 @@
-export interface IPhoto {
-  url: string;
-}
-
-export interface IAlbum {
-  photos: {
-    data: IPhoto[];
-  };
-}
-
 export interface IUser {
   id: number;
   name: string;
   username: string;
   email: string;
-  albums: {
-    data: IAlbum[];
-  };
+  phone: string;
+  website: string;
+  aboutMe: string;
+  photo: string;
+  numberOfVote: number;
 }
 
 export interface IUserData {
-  users: {
-    data: IUser[];
-  };
+  users: IUser[];
 }
