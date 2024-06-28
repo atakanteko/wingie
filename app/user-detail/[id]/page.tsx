@@ -1,3 +1,4 @@
+import UserDetail from '@/app/components/user/detail';
 import { ISingleUserData } from '@/app/interface';
 import { GET_USER } from '@/graphql/queries/getUsers';
 import client from '@/lib/apollo-client';
@@ -26,11 +27,7 @@ async function getUser(id: string) {
 const UserDetailPage = async ({ params }: UserDetailPageProps) => {
   const response: ISingleUserData = await getUser(params.id);
 
-  return (
-    <div>
-      {params.id} - {response.user.name}
-    </div>
-  );
+  return <UserDetail user={response.user} />;
 };
 
 export default UserDetailPage;
