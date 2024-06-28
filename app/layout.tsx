@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
 import { Suspense } from 'react';
 import Loading from './loading';
-
 const inter = Inter({ subsets: ['latin'] });
+
+import './globals.scss';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <Suspense fallback={<Loading />}>
+          <main className='application'>{children}</main>
+        </Suspense>
       </body>
     </html>
   );

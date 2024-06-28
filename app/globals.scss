@@ -1,0 +1,58 @@
+@import "@/app/style/default.scss";
+
+
+// Global reset
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Links styling
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// Body styling
+body {
+    background-color: #f0f4fd;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+// Main application container
+.application {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+// Wrapper for content
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+
+    @include media-query(sm) {
+        max-width: $col-sm;
+    }
+
+    @include media-query(md) {
+        max-width: $col-md;
+    }
+
+    @include media-query(lg) {
+        max-width: $col-lg;
+    }
+
+    @include media-query(xl) {
+        max-width: $col-xl;
+    }
+}
