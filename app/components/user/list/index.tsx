@@ -10,7 +10,6 @@ type UserListProps = {
 
 const UserList = ({ data }: UserListProps) => {
   const [userData, setUserData] = useState<IUserData>(data);
-  console.log(userData);
   return (
     <div className='user-list container'>
       {userData?.users.map((item, index) => (
