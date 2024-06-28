@@ -23,6 +23,80 @@ body {
     overflow-x: hidden;
 }
 
+// global error
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.error-content {
+    text-align: center;
+}
+
+.error-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.error-button {
+    border-radius: 4px;
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+/* NotFound */
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.not-found-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.not-found-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.not-found-link {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+
 // Main application container
 .application {
     min-height: 100vh;
