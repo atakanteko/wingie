@@ -1,5 +1,5 @@
 export interface IUser {
-  id: number;
+  id: string;
   name: string;
   username: string;
   email: string;
@@ -12,4 +12,8 @@ export interface IUser {
 
 export interface IUserData {
   users: IUser[];
+}
+
+export interface ISingleUserData {
+  user: IUser;
 }

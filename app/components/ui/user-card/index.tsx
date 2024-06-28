@@ -6,10 +6,12 @@ import Image from 'next/image';
 import client from '@/lib/apollo-client';
 import { GET_USERS, INCREASE_VOTE } from '@/graphql/queries/getUsers';
 import { useQuery, useMutation } from '@apollo/client';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, MouseEvent, SetStateAction } from 'react';
+import { routes } from '@/constant/routes';
 
 const UserCard = ({ data, setUserData }: { data: IUser; setUserData: Dispatch<SetStateAction<IUserData>> }) => {
-  const handleVoteIncrease = async (id: number) => {
+  const handleVoteIncrease = async (e: MouseEvent<HTMLButtonElement>, id: string) => {
+    e.preventDefault();
     await client.mutate({
       mutation: INCREASE_VOTE,
       variables: { id },
@@ -30,7 +32,7 @@ const UserCard = ({ data, setUserData }: { data: IUser; setUserData: Dispatch<Se
   };
 
   return (
-    <div className='user-card'>
+    <Link href={routes.userDetail(data.id)} className='user-card'>
       <div className='img-section'>
         <div className='img-circle'>
           <div className='img'>
@@ -41,7 +43,7 @@ const UserCard = ({ data, setUserData }: { data: IUser; setUserData: Dispatch<Se
       <div className='info-section'>
         <div className='info-box-1'>
           <h4>{data.name}</h4>
-          <button onClick={() => handleVoteIncrease(data.id)}>Vote ({data.numberOfVote})</button>
+          <button onClick={(e) => handleVoteIncrease(e, data.id)}>Vote ({data.numberOfVote})</button>
         </div>
         <div className='info-box-2'>
           <div className='contact'>
@@ -54,7 +56,7 @@ const UserCard = ({ data, setUserData }: { data: IUser; setUserData: Dispatch<Se
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

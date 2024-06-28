@@ -25,3 +25,19 @@ export const INCREASE_VOTE = gql`
     }
   }
 `;
+
+export const GET_USER = gql`
+  query GetUser($id: ID!) {
+    user(id: $id) {
+      id
+      name
+      username
+      email
+      phone
+      website
+      aboutMe
+      photo
+      numberOfVote
+    }
+  }
+`;
