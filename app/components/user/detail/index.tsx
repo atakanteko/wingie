@@ -3,12 +3,13 @@ import { IUser } from '@/app/interface';
 import './style.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { routes } from '@/constant/routes';
 
 const UserDetail = ({ user }: { user: IUser }) => {
   const router = useRouter();
 
   const goBack = () => {
-    router.back();
+    router.push(routes.home);
   };
 
   return (
@@ -25,7 +26,7 @@ const UserDetail = ({ user }: { user: IUser }) => {
           <p>Votes: {user.numberOfVote}</p>
         </div>
         <button className='go-back-btn' onClick={goBack}>
-          Go Back
+          Go Home
         </button>
       </div>
     </div>
