@@ -1,56 +1,55 @@
-@import "@/app/style/default.scss";
-
+@import '@/app/style/default.scss';
 
 .user-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .user-detail {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    max-width: 600px;
+    width: 100%;
 
-    .user-detail {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        background-color: #f0f0f0;
-        max-width: 600px;
-        width: 100%;
-
-        .user-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-
-        .user-info {
-            flex: 1;
-
-            h2 {
-                margin-bottom: 10px;
-            }
-
-            p {
-                margin-bottom: 5px;
-            }
-        }
-
-        .go-back-btn {
-            align-self: flex-end;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #0056b3;
-            }
-        }
+    .user-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 20px;
     }
+
+    .user-info {
+      flex: 1;
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+    }
+
+    .go-back-btn {
+      align-self: flex-end;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
 }

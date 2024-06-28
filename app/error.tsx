@@ -6,7 +6,7 @@ interface Props {
   reset: () => void;
 }
 
-const GlobalError: React.FC<Props> = ({ error, reset }) => {
+const GlobalError: React.FC<Props> = ({ reset }) => {
   return (
     <div className='error-container'>
       <div className='error-content'>

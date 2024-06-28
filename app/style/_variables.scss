@@ -1,16 +1,15 @@
 $breakpoints: (
-    "sm": 576px,
-    "md": 768px,
-    "lg": 1024px,
-    "xl": 1280px,
-    "xxl": 1400px
+  'sm': 576px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1400px
 );
 
-$white: #FFF;
-$bg-var1: #F8F8F8;
-$dark-var1: #1D1F26;
-$blue-base1: #0571ED;
-
+$white: #fff;
+$bg-var1: #f8f8f8;
+$dark-var1: #1d1f26;
+$blue-base1: #0571ed;
 
 $col-sm: 540px;
 $col-md: 720px;

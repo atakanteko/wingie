@@ -5,7 +5,6 @@ import './style.scss';
 import Image from 'next/image';
 import client from '@/lib/apollo-client';
 import { GET_USERS, INCREASE_VOTE } from '@/graphql/queries/getUsers';
-import { useQuery, useMutation } from '@apollo/client';
 import { Dispatch, MouseEvent, SetStateAction } from 'react';
 import { routes } from '@/constant/routes';
 
