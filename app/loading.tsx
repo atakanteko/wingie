@@ -1,3 +1,5 @@
+import FullPageLoader from '@/app/components/ui/full-page-loader/';
+
 export default function Loading() {
-  return <h1>Loading</h1>;
+  return <FullPageLoader />;
 }
